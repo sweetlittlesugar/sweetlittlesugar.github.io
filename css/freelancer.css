@@ -376,3 +376,14 @@ footer .footer-below {
   opacity: 0;
   display: none;
 }
+
+/* Added by Chad */
+#hidden-thanks {
+    display: none;
+}
+
+#hidden-thanks:target {
+    display: block;
+}
+
+select:invalid { color: #acb6c0; }

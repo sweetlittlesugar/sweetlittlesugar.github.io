@@ -256,6 +256,7 @@
                     <hr class="star-primary">
                 </div>
             </div>
+            
             <div class="row text-center">
                 <p>
                 Interested in ordering some cookies for a special occasion, or no occasion at all? Let's talk. Fill out the form below and I'll get back to you ASAP.
@@ -265,11 +266,15 @@
                       method="POST">
                 <fieldset>
                     
+                <input type="hidden" name="_subject" value="Inquiry from sweetlittlesugar.com" />
+                <input type="hidden" name="_next" value="//localhost/sls/sweetlittlesugar.github.io/index.html#hidden-thanks" />
+                <input type="text" name="_gotcha" style="display:none" />
+                    
                 <!-- Text input-->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="Name">Name</label>  
                   <div class="col-md-5">
-                  <input id="Name" name="Name" type="text" placeholder="Name" class="form-control input-md" required="">
+                  <input id="Name" name="Name" type="text" placeholder="Name (Required)" class="form-control input-md" required="">
 
                   </div>
                 </div>
@@ -278,7 +283,7 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="Email">Email</label>  
                   <div class="col-md-5">
-                  <input id="Email" name="_replyto" type="text" placeholder="Email address" class="form-control input-md" required="">
+                  <input id="Email" name="_replyto" type="text" placeholder="Email address (Required)" class="form-control input-md" required="">
 
                   </div>
                 </div>
@@ -287,7 +292,8 @@
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="Occasion">Occasion</label>
                   <div class="col-md-5">
-                    <select id="Occasion" name="Occasion" class="form-control">
+                    <select id="Occasion" name="Occasion" class="form-control input-md" required="">
+                      <option value="" disabled selected hidden>So what's the occassion? (Required)</option>
                       <option value="Birthday">Birthday</option>
                       <option value="Wedding">Wedding</option>
                       <option value="Baby Shower">Baby Shower</option>
@@ -296,11 +302,12 @@
                   </div>
                 </div>
 
-                <!-- Select Basic -->
+                <!-- Quantity input -->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="selectbasic">Quantity</label>
+                  <label class="col-md-4 control-label" for="Quantity">Quantity</label>
                   <div class="col-md-5">
-                    <select id="selectbasic" name="selectbasic" class="form-control">
+                    <select id="Quantity" name="Quantity" class="form-control" required="">
+                        <option value="" disabled selected hidden>How many cookies do you need? (Required)</option>
                       <option value="1 dozen">1 dozen</option>
                       <option value="2 dozen">2 dozen</option>
                       <option value="3 dozen">3 dozen</option>
@@ -313,19 +320,27 @@
                     <label class="col-md-4 control-label">Pickup Date</label>
                     <div class="col-md-5">
                         <div class="input-group date" data-provide="datepicker">
-                            <input type="text" class="form-control input-md">
+                            <input id="Pickup Date" placeholder="Date you would like to pickup your cookies (Required)" name="Pickup Date" type="text" class="form-control input-md" required="">
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-th"></span>
                             </div>
                         </div>
                     </div>
                 </div>
+                    
+                <!-- Note input -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="Note">Note</label>  
+                  <div class="col-md-5">
+                      <textarea id="Note" name="Note" rows="4" placeholder="Want to send a little note as well? (Optional)" class="form-control input-md"></textarea>
+                  </div>
+                </div>
                 
                 <!-- Button -->
                 <div class="form-group">
                   <label class="col-md-4 control-label" for="submit"></label>
                   <div class="col-md-4">
-                    <input type="submit" id="submit" name="singlebutton" class="btn btn-info" value="Submit">
+                    <input type="submit" id="submit" class="btn btn-info" value="Submit">
                   </div>
                 </div>
 
@@ -333,6 +348,13 @@
                 </form>
 
                 </p>
+            </div>
+            <div class="row text-center">
+                <div id="hidden-thanks">
+                    <p>
+                    Thanks for sending a message!
+                    </p>
+                </div>
             </div>
         </div>
     </section>
