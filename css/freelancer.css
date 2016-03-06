@@ -387,3 +387,17 @@ footer .footer-below {
 }
 
 select:invalid { color: #acb6c0; }
+
+img.instafeed {
+    padding: 2px;
+}
+
+div#instafeed {
+    
+    margin: 0 auto;
+}
+
+div#instafeed-load-more {
+    
+    margin: 0 auto;
+}
