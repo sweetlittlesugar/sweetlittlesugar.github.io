@@ -382,6 +382,10 @@ footer .footer-below {
     display: none;
 }
 
+#hidden-thanks-cookie-club {
+    display: none;
+}
+
 #hidden-thanks:target {
     display: block;
 }
