@@ -407,3 +407,7 @@ div#instafeed {
 div#instafeed-load-more {   
     margin: 0 auto;
 }
+
+.large-text {
+    font-size: 20px;
+}
