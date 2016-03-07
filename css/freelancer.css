@@ -382,11 +382,15 @@ footer .footer-below {
     display: none;
 }
 
+#hidden-thanks:target {
+    display: block;
+}
+
 #hidden-thanks-cookie-club {
     display: none;
 }
 
-#hidden-thanks:target {
+#hidden-thanks-cookie-club:target {
     display: block;
 }
 
@@ -396,12 +400,10 @@ img.instafeed {
     padding: 2px;
 }
 
-div#instafeed {
-    
+div#instafeed { 
     margin: 0 auto;
 }
 
-div#instafeed-load-more {
-    
+div#instafeed-load-more {   
     margin: 0 auto;
 }
